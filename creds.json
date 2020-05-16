@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "boxwood-plating-277400",
+  "private_key_id": "76874347f6ff5e23e62c4f4a0d6363886b22db72",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC1a6UyNIJ2Pi3L\n9NyOjTbnbQ3L6xc2g6Ou8Ocmh8cIz4emVXdzbKhvHbYEttpc0YtMqlD3bzDtvR/o\n4zveq6/yzJ6j67IJp/Ldu9ROpdzQKB5UnWKfBY6it4Oncco4i4gI6j5BEKZcyL67\nRnwyHGiZLJIeejIXoDCyGMQoqDIiiCKc9oGu3DMij47d+ehdtBuyG7lHWyuPiHe8\nJXczV+9skXDL51tQYHcEs5UuQR9S/ed8EiZNjhrtRe6OBI2sFvPcLF+gXt0q5y1b\nccWMBPsX5+j/elvGeqPXOWrcHqcg44XYHVbYGmYbtfAey6Z3knEUA15Mm+UDN0vx\nHy8h024PAgMBAAECggEAG82THpOU3tbT9pWLFj78CBGFc205kdLbdfGuFbs/PHwZ\njNs87YUxzFL1qdlKs74v+/V/Z7w0TRWWhf61FoCh/AgcfoCeOK6ddhqABKGUqpig\ntVT9X+OJItS+/3KyjAyOMizmkjAhXseBENBSM5fOS+iHEtalRfZNytgoJRb0aqgc\nFqTjwXt1+tGbJE/FIjWKXV1xnRHtKKXagTjLTQYDnnvC1i/quyBNi/tnAKRpkyPl\nTuip+FHAI5PVBzCsE+w2+3Ui94T3I7vq5oN/ntzI3Lid7YD0qn+0sMpDCtMPTumE\nleAW7H0KXLWXOhy7+yWz4zwBhnyWxZYn8lsBZLfF+QKBgQD9asBZIZMc2qMZPQKs\nC/Nuv22vbuBtPR6C449VKQ3PL5T2urW1PlRdf430oHL/QtlYL6KIol68ey74TgTQ\nnaBxb85+/sVqBIh+Mpk9mRgRGeRWLHyS7HoazgsloRooPcXylfy9oWzHQaMrx6RD\nZwoCQBJqX+HIiBIR9G5bCwtkDQKBgQC3RQgBUuTUBSu7YF8DpmaB5mQC5kwtoijC\nzSJo0YbVBn+q4RyN/bcEq+zSXb+XVgmu6NgHeQNuhUq7JCFm+XhDGcnuI/nQdGXW\nv9+JekBp3VnJBu6Jut70Dwta7X7N1braclw4v+ba3fuXQi159NoOKviJn9DxSks9\n956k+dbHiwKBgAK82H8eAbzaD9EB+7loF6UmpES06e/ELUQ0uSOuYdvPI8jWk4f1\nuGuaKSpvYU6opjhxq0vWlTdsDUHZdevbCBSxpIVysydGDUNvwIAN21iz8ueLa30a\n2ObZOv2ZE/NDV5QbUrOpvscYSm76pSelQVJs5sYHayUDc06GWXraT7ExAoGAP7md\nIviz4JU7s5e68gX2NszpkaiKbIOqMLIreM8CVyg/VCeaSjUiYll1q2A1smWUUGFe\nXJrTeqaWaaQSiT/NdWeOM2QHBViz4IwvKhp8M1NoWOI0J2f3Bl4E0MUsBl5+7l49\neu4fU5NEXEACmBlviOWgLhqICJ6Qsyda3nqRGCkCgYBXdZ96TFCvmDUupt46nrXk\niagZ2NBtamBmvXejPRl5Aov0p8KaZsvIpeKCvADEdSwbVr6+KmL5CF+PZ9c2xqy4\nxJSGc9+A18130Q6jtqzGU1Uf1GEGAKDNdwLkHFy1CzvsGZLGG4i6UejjIEU0t+1P\n1Xh+cEaypRDVnlIw49WBIw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "main-202@boxwood-plating-277400.iam.gserviceaccount.com",
+  "client_id": "116747536079088129033",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/main-202%40boxwood-plating-277400.iam.gserviceaccount.com"
+}
