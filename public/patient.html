@@ -41,14 +41,14 @@
                         <!--Select Age Input-->
                         <div class="def-number-input number-input">
                             <!--<button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus"></button>-->
-                            <input class="quantity" min="0" name="age" value="1" type="number">
+                            <input class="quantity" min="0" name="age" type="number" id="age_selector">
                             <!--<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>-->
                         </div>
                     </div>
                 </div>
 
                 <div style="text-align: center">
-                    <button class="btn btn-primary" type="button" id="sex_age_form_continue">Continue</button>
+                    <button class="btn btn-primary" type="button" id="sex_age_form_continue" disabled>Continue</button>
                 </div>
             </div>
             <br><br><hr class="solid">
@@ -94,7 +94,7 @@
                 </div>
 
                 <div style="text-align: center">
-                    <button class="btn btn-primary" type="button" id="current_treatment_form_continue">Continue</button>
+                    <button class="btn btn-primary" type="button" id="current_treatment_form_continue" disabled>Continue</button>
                 </div>
             </div>
             <br><br><hr class="solid" hidden>
@@ -197,7 +197,7 @@
                 </div>
 
                 <div style="text-align: center">
-                    <button class="btn btn-primary" type="button" id="prior_health_form_continue">Continue</button>
+                    <button class="btn btn-primary" type="button" id="prior_health_form_continue" disabled>Continue</button>
                 </div>
             </div>
             <br><br><hr class="solid" hidden>
@@ -239,6 +239,52 @@
         const buttonContinuePriorHealthConditions = document.getElementById("prior_health_form_continue");
         const buttonSubmit = document.getElementById("submit_form");
 
+        // Add the logic to each form section that only enables the "Continue" buttons when all
+        // required information in that section has been inputted by the user
+        //-----------------------------------------------------------------------------------------
+        // Sex/age form section
+        for (inputItem of formSectionSexAge.querySelectorAll("input")) {
+            inputItem.onchange = function() {
+                let formCompleted = (document.getElementById("sex_male").checked || document.getElementById("sex_female").checked)
+                                    && document.getElementById("age_selector").value;
+
+                buttonContinueSexAge.disabled = !formCompleted;
+            }
+        }
+
+        // Current treatment status form section
+        for (inputItem of formSectionCurrentTreatmentStatus.querySelectorAll("input")) {
+            inputItem.onchange = function() {
+                console.log("did it");
+                let formCompleted = (document.getElementById("intubation_yes").checked || document.getElementById("intubation_no").checked)
+                                    && (document.getElementById("icu_yes").checked || document.getElementById("icu_no").checked);
+
+                buttonContinueCurrentTreatmentStatus.disabled = !formCompleted;
+            }
+        }
+
+        // Prior health conditions form section
+        for (inputItem of formSectionPriorHealthConditions.querySelectorAll("input")) {
+            inputItem.onchange = function() {
+                let formCompleted = (document.getElementById("pneumonia_yes").checked || document.getElementById("pneumonia_no").checked)
+                    && (document.getElementById("diabetes_yes").checked || document.getElementById("diabetes_no").checked)
+                    && (document.getElementById("copd_yes").checked || document.getElementById("copd_no").checked)
+                    && (document.getElementById("hypertension_yes").checked || document.getElementById("hypertension_no").checked)
+                    && (document.getElementById("other_diseases_yes").checked || document.getElementById("other_diseases_no").checked);
+
+                buttonContinuePriorHealthConditions.disabled = !formCompleted;
+            }
+        }
+
+        // Smoker form section
+        for (inputItem of formSectionSmoker.querySelectorAll("input")) {
+            inputItem.onchange = function() {
+                let formCompleted = (document.getElementById("smoker_yes").checked || document.getElementById("smoker_no").checked);
+
+                buttonSubmit.disabled = !formCompleted;
+            }
+        }
+
         // Add the logic to each of the continue buttons to create the "slideshow effect" of questions
         // appearing below as the user completes the above questions
         buttonContinueSexAge.onclick = function() {
@@ -265,7 +311,6 @@
 
             // The next section is the last one, so enable the submit button now
             buttonSubmit.hidden = false;
-            buttonSubmit.disabled = false;
 
             // Disable this button (since the next section's button is what the user should use next)
             buttonContinuePriorHealthConditions.disabled = true;
