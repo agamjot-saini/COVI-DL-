@@ -4,65 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 
 <body>
-    <h1>PATIENT DYING RS? PAGE</h1>
+    <div class="container-fluid bg-dark">
+        <h1 class="text-primary text-center font-weight-bold">PATIENT DYING RS? PAGE</h1>
 
-    <div id="form_sex">
-        <h2>Sex</h2>
-        <p>What is your sex?</p>
-    </div>
-
-    <div id="form_age">
-        <h2>Age</h2>
-        <p>How old are you?</p>
-    </div>
-
-    <div id="form_current_treatment_status">
-        <h2>Current Treatment Status</h2>
-        <div id="form_intubated">
-            <h3>Intubation</h3>
-            <p>Are you currently being intubated (i.e. requiring the assistance of a ventilator)?</p>
+        <div id="form_sex">
+            <h2 class="text-info">Sex</h2>
+            <p class="text-white">What is your sex?</p>
         </div>
 
-        <div id="form_icu">
-            <h3>Intensive Care Unit (ICU)</h3>
-            <p>Are you currently admitted in the ICU?</p>
-        </div>
-    </div>
-
-    <div id="form_prior_current_health_conditions">
-        <h2>Prior/Current Health Conditions</h2>
-
-        <div id="form_pneumonia">
-            <h3>Pneumonia</h3>
-            <p>Have you ever had pneumonia?</p>
+        <div id="form_age">
+            <h2 class="text-info">Age</h2>
+            <p class="text-white">How old are you?</p>
         </div>
 
-        <div id="form_diabetes">
-            <h3>Diabetes</h3>
-            <p>Have you ever had diabetes?</p>
+        <div id="form_current_treatment_status">
+            <h2 class="text-info">Current Treatment Status</h2>
+            <div id="form_intubated">
+                <h3 class="text-info">Intubation</h3>
+                <p class="text-white">Are you currently being intubated (i.e. requiring the assistance of a ventilator)?</p>
+            </div>
+
+            <div id="form_icu">
+                <h3 class="text-info">Intensive Care Unit (ICU)</h3>
+                <p class="text-white">Are you currently admitted in the ICU?</p>
+            </div>
         </div>
 
-        <div id="form_copd">
-            <h3>Chronic Obstructive Pulmonary Disease (COPD)</h3>
-            <p>Have you ever had COPD?</p>
+        <div id="form_prior_current_health_conditions">
+            <h2 class="text-info">Prior/Current Health Conditions</h2>
+
+            <div id="form_pneumonia">
+                <h3 class="text-info">Pneumonia</h3>
+                <p class="text-white">Have you ever had pneumonia?</p>
+            </div>
+
+            <div id="form_diabetes">
+                <h3 class="text-info">Diabetes</h3>
+                <p class="text-white">Have you ever had diabetes?</p>
+            </div>
+
+            <div id="form_copd">
+                <h3 class="text-info">Chronic Obstructive Pulmonary Disease (COPD)</h3>
+                <p class="text-white">Have you ever had COPD?</p>
+            </div>
+
+            <div id="form_hypertension">
+                <h3 class="text-info">Hypertension</h3>
+                <p class="text-white">Have you ever suffered from hypertension?</p>
+            </div>
+
+            <div id="form_other_diseases">
+                <h3 class="text-info">Other Diseases</h3>
+                <p class="text-white">Have you ever had any other diseases, besides those listed above?</p>
+            </div>
         </div>
 
-        <div id="form_hypertension">
-            <h3>Hypertension</h3>
-            <p>Have you ever suffered from hypertension?</p>
+        <div id="form_smoker">
+            <p class="text-white">Are you currently a smoker?</p>
         </div>
-
-        <div id="form_other_diseases">
-            <h3>Other Diseases</h3>
-            <p>Have you ever had any other diseases, besides those listed above?</p>
-        </div>
-    </div>
-
-    <div id="form_smoker">
-        <p>Are you currently a smoker?</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
