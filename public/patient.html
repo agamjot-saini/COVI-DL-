@@ -13,8 +13,9 @@
         <h1 class="text-success text-center font-weight-bold">PATIENT DYING RS? PAGE</h1>
         <hr class="solid">
         <form>
-            <div id="form-sex-age">
+            <div id="form_sex_age">
                 <div class="row">
+                    <!--Sex Form-->
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center form-group" id="form_sex">
                         <h2 class="text-primary">Sex</h2>
                         <p class="text-white">What is your sex?</p>
@@ -32,6 +33,7 @@
                         </div>
                     </div>
 
+                    <!--Age Form-->
                     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center form-group" id="form_age">
                         <h2 class="text-primary">Age</h2>
                         <p class="text-white">How old are you?</p>
@@ -43,6 +45,10 @@
                             <!--<button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>-->
                         </div>
                     </div>
+                </div>
+
+                <div style="text-align: center">
+                    <button class="btn btn-primary" type="button" id="sex_age_form_continue">Continue</button>
                 </div>
             </div>
             <br><br><hr class="solid">
@@ -86,6 +92,10 @@
                         </div>
                     </div>
                 </div>
+
+                <div style="text-align: center">
+                    <button class="btn btn-primary" type="button" id="current_treatment_form_continue">Continue</button>
+                </div>
             </div>
             <br><br><hr class="solid" hidden>
 
@@ -128,7 +138,6 @@
                         </div>
                     </div>
                 </div>
-
                 <br><br>
 
                 <div class="row">
@@ -166,7 +175,6 @@
                         </div>
                     </div>
                 </div>
-
                 <br><br>
 
                 <div class="row">
@@ -186,6 +194,10 @@
                         <label class="text-white custom-control-label" for="other_diseases_no">No</label>
                     </div>
                 </div>
+                </div>
+
+                <div style="text-align: center">
+                    <button class="btn btn-primary" type="button" id="prior_health_form_continue">Continue</button>
                 </div>
             </div>
             <br><br><hr class="solid" hidden>
@@ -209,14 +221,63 @@
                 </div>
             </div>
             <br><br>
+
+            <div style="text-align: center">
+                <button class="btn btn-primary" type="submit" id="submit_form" hidden disabled>Submit</button>
+            </div>
         </form>
     </div>
 
     <script>
-        const
+        const formSectionSexAge = document.getElementById("form_sex_age");
+        const formSectionCurrentTreatmentStatus = document.getElementById("form_current_treatment_status");
+        const formSectionPriorHealthConditions = document.getElementById("form_prior_current_health_conditions");
+        const formSectionSmoker = document.getElementById("form_smoker");
+
+        const buttonContinueSexAge = document.getElementById("sex_age_form_continue");
+        const buttonContinueCurrentTreatmentStatus = document.getElementById("current_treatment_form_continue");
+        const buttonContinuePriorHealthConditions = document.getElementById("prior_health_form_continue");
+        const buttonSubmit = document.getElementById("submit_form");
+
+        // Add the logic to each of the continue buttons to create the "slideshow effect" of questions
+        // appearing below as the user completes the above questions
+        buttonContinueSexAge.onclick = function() {
+            // Show the next section
+            formSectionCurrentTreatmentStatus.hidden = false;
+
+            // Disable this button (since the next section's button is what the user should use next)
+            buttonContinueSexAge.disabled = true;
+            buttonContinueSexAge.hidden = true;
+        };
+
+        buttonContinueCurrentTreatmentStatus.onclick = function() {
+            // Show the next section
+            formSectionPriorHealthConditions.hidden = false;
+
+            // Disable this button (since the next section's button is what the user should use next)
+            buttonContinueCurrentTreatmentStatus.disabled = true;
+            buttonContinueCurrentTreatmentStatus.hidden = true;
+        };
+
+        buttonContinuePriorHealthConditions.onclick = function() {
+            // Show the next section
+            formSectionSmoker.hidden = false;
+
+            // The next section is the last one, so enable the submit button now
+            buttonSubmit.hidden = false;
+            buttonSubmit.disabled = false;
+
+            // Disable this button (since the next section's button is what the user should use next)
+            buttonContinuePriorHealthConditions.disabled = true;
+            buttonContinuePriorHealthConditions.hidden = true;
+        };
+
+        buttonSubmit.onclick = function() {
+            // Call the patient.js code to get the prediction and display it to the user
+        }
     </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
-    <script src="./js/patient.js"></script>
+<!--    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>-->
+<!--    <script src="./js/patient.js"></script>-->
 </body>
 </html>
