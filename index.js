@@ -11,6 +11,15 @@ app.use(
   })
 );
 
+app.get('/x-ray', function(req,res){
+  res.send('x-ray page');
+});
+
+app.get('/patient', function(req,res){
+  res.send('patient page');
+});
+
+
 const PORT = 443;
 app.listen(process.env.PORT || PORT, (err) => {
     if (err) console.log;
