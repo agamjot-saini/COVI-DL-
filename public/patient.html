@@ -5,8 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Covid</title>
 </head>
+
 <body>
     <h1>PATIENT DYING RS? PAGE</h1>
+
+    <div id="form_sex">
+        <h2>Sex</h2>
+        <p>What is your sex?</p>
+    </div>
+
+    <div id="form_age">
+        <h2>Age</h2>
+        <p>How old are you?</p>
+    </div>
+
+    <div id="form_current_treatment_status">
+        <h2>Current Treatment Status</h2>
+        <div id="form_intubated">
+            <h3>Intubation</h3>
+            <p>Are you currently being intubated (i.e. requiring the assistance of a ventilator)?</p>
+        </div>
+
+        <div id="form_icu">
+            <h3>Intensive Care Unit (ICU)</h3>
+            <p>Are you currently admitted in the ICU?</p>
+        </div>
+    </div>
+
+    <div id="form_prior_current_health_conditions">
+        <h2>Prior/Current Health Conditions</h2>
+
+        <div id="form_pneumonia">
+            <h3>Pneumonia</h3>
+            <p>Have you ever had pneumonia?</p>
+        </div>
+
+        <div id="form_diabetes">
+            <h3>Diabetes</h3>
+            <p>Have you ever had diabetes?</p>
+        </div>
+
+        <div id="form_copd">
+            <h3>Chronic Obstructive Pulmonary Disease (COPD)</h3>
+            <p>Have you ever had COPD?</p>
+        </div>
+
+        <div id="form_hypertension">
+            <h3>Hypertension</h3>
+            <p>Have you ever suffered from hypertension?</p>
+        </div>
+
+        <div id="form_other_diseases">
+            <h3>Other Diseases</h3>
+            <p>Have you ever had any other diseases, besides those listed above?</p>
+        </div>
+    </div>
+
+    <div id="form_smoker">
+        <p>Are you currently a smoker?</p>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
     <script src="./js/patient.js"></script>
